@@ -1,4 +1,2 @@
-x = int(input())
-y = int(input())
-
-print(x+y)
+#This is a comment
+print("Hello, World!")
