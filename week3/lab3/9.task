@@ -1,0 +1,7 @@
+def volumeSphere(radius: float): 
+   fp = (4/3) * 3.14 
+   sp = radius ** 3 
+   volume = fp * sp 
+   return volume 
+x = int(input())
+print(volumeSphere(x))

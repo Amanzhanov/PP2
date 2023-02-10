@@ -1,0 +1,4 @@
+F = int(input())
+def f(F):
+  print((5 / 9) * (F - 32))
+f(F)

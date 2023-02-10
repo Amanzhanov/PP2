@@ -1,0 +1,12 @@
+heads = int(input())
+legs = int(input())
+c = heads * 2
+d = legs - c 
+f = 4 - 2 
+def cnt(d , f , heads):
+    print(int(d / f))
+    print(int(heads - (d / f)))
+cnt(d , f , heads)
+
+  
+   
