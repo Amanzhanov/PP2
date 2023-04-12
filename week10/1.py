@@ -1,31 +1,29 @@
 import pygame
 import datetime
 
+
 def rot_center(image, angle, x, y):
-    
     rotated_image = pygame.transform.rotate(image, angle)
-    new_rect = rotated_image.get_rect(center = image.get_rect(center = (x, y)).center)
+    new_rect = rotated_image.get_rect(center=image.get_rect(center=(x, y)).center)
 
     return rotated_image, new_rect
 
 
 pygame.init()
 
-
 clock_main = pygame.display.set_mode((900, 700))
-h = pygame.image.load("data/clock_main.png")
+h = pygame.image.load("clock_main.png")
 h = pygame.transform.scale(h, clock_main.get_size())
 clock_main.blit(h, (0, 0))
-clock_second = pygame.image.load("data/clock_second-removebg-preview (1).png")
+clock_second = pygame.image.load("clock_second-removebg-preview.png")
 cl = clock_main.get_rect().center
 
-clock_minute = pygame.image.load("data/roma_clock-removebg-preview.png")
-ok=True
-while ok:
+clock_minute = pygame.image.load("roma_clock-removebg-preview.png")
+
+while True:
     for event in pygame.event.get():
         if event == pygame.QUIT:
             pygame.quit()
-            ok=False
             exit()
     clock_main.blit(h, (0, 0))
     time_now = datetime.datetime.now()
